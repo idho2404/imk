@@ -1,0 +1,334 @@
+/**
+* Template Name: NiceAdmin
+* Updated: Sep 18 2023 with Bootstrap v5.3.2
+* Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    scroll-behavior: smooth;
+    --branding-primary-color: #951a2e;
+    --branding-secondary-color: #011f4b;
+    --branding-accent-color: #f58020;
+    --branding-base-color: #fffae6;
+}
+
+.background-primary {
+    background: var(--branding-primary-color);
+}
+
+.background-secondary {
+    background: var(--branding-secondary-color);
+}
+
+.background-accent {
+    background: var(--branding-accent-color);
+}
+
+.color-base {
+    color: var(--branding-base-color);
+}
+
+.color-primary {
+    color: var(--branding-primary-color);
+}
+
+.color-secondary {
+    color: var(--branding-secondary-color) !important;
+}
+
+.color-accent {
+    color: var(--branding-accent-color);
+}
+
+.background-base {
+    color: var(--branding-base-color);
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    background: #f6f9ff;
+    color: #444444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    background: #4154f1;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #6776f4;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Light Backgrounds */
+.bg-primary-light {
+    background-color: #cfe2ff;
+    border-color: #cfe2ff;
+}
+
+.bg-secondary-light {
+    background-color: #e2e3e5;
+    border-color: #e2e3e5;
+}
+
+.bg-success-light {
+    background-color: #d1e7dd;
+    border-color: #d1e7dd;
+}
+
+.bg-danger-light {
+    background-color: #f8d7da;
+    border-color: #f8d7da;
+}
+
+.bg-warning-light {
+    background-color: #fff3cd;
+    border-color: #fff3cd;
+}
+
+.bg-info-light {
+    background-color: #cff4fc;
+    border-color: #cff4fc;
+}
+
+.bg-dark-light {
+    background-color: #d3d3d4;
+    border-color: #d3d3d4;
+}
+
+/* Card */
+.card {
+    /*margin-bottom: 30px;*/
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.card-header,
+.card-footer {
+    border-color: #ebeef4;
+    background-color: #e84545;
+    padding: 10px;
+}
+
+.card-header h4 {
+    color: #fff;
+}
+
+.card-title {
+    padding: 10px 0px 0px 1rem;
+    font-size: 18px;
+    font-weight: 700;
+    color: #012970;
+}
+
+.card-body .card-title {
+    padding: 10px 0px 0px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #012970;
+}
+.card-title-card-sikoko {
+    padding: 20px 10px 10px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #012970;
+}
+
+.card-title span {
+    color: #899bbd;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-body {
+    padding: 0 8px 0px 8px;
+}
+
+.card-img-overlay {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#detail-rapat-card-sikoko {
+    line-height: 1.5;
+    padding: 0px 10px 0px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #012970;
+}
+
+/* Bordered Tabs */
+.nav-tabs {
+    border-bottom: 2px solid #ebeef4;
+}
+
+.nav-tabs .nav-link {
+    margin-bottom: -2px;
+    border: none;
+    color: black;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: #fff;
+    background-color: #e84545;
+    transition: ease-in-out 0.5s;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #e84545;
+    color: #fff;
+    border-bottom: 2px solid var(--blue-active-menu-bau);
+}
+
+#button-action-rapat-card-sikoko {
+    text-align: right;
+}
+#button-action-rapat-card-sikoko a {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--branding-base-color);
+}
+
+.badge-custom {
+    display: inline-block;
+    width: max-content;
+    text-align: left;
+    padding: auto;
+}
+
+.icon-space {
+    margin-right: 5px;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.logo {
+    line-height: 1;
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        width: 280px;
+    }
+}
+
+.logo img {
+    max-height: 55px;
+    margin-right: 6px;
+}
+
+.logo span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #012970;
+    /* font-family: "Nunito", sans-serif; */
+    font-family: "Poppins", sans-serif;
+}
+
+/*loader*/
+/*untuk background putih*/
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/*untuk gambarnya*/
+#loading img {
+    width: 300px;
+    height: auto;
+    animation: flashing 1.5s infinite linear;
+}
+
+/*preloader*/
+#loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 9999;
+    background-color: var(--branding-base-color);
+}
+
+#loader-content {
+    text-align: center;
+}
+
+/*end preloader*/
+
+/* Animasi fade out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#loader-container.fadeOut {
+    animation: fadeOut 0.5s ease-out;
+}
+
+/*added css*/
+.mid {
+    background-color: #059652;
+    text-align: center;
+}
